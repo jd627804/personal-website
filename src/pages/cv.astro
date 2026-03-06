@@ -4,15 +4,26 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
-  <div class="mb-5">
+  <div class="mb-5 flex items-center justify-between">
     <div class="text-3xl w-full font-bold">Profile</div>
+
+    <a
+      href="/resume.pdf"
+      download
+      class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+    >
+      Download Resume
+    </a>
   </div>
 
   <div class="mb-10 text-justify">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Software engineer specializing in image processing, tracking systems,
+    and applied artificial intelligence. Experienced building real-world
+    systems combining computer vision, estimation algorithms, and
+    software engineering.
+
+    Currently working as an engineer at Lockheed Martin focusing on
+    image processing, tracking, and AI applications.
   </div>
 
   <div class="mb-5">
