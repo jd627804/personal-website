@@ -2,12 +2,16 @@
 const today = new Date();
 ---
 
-<footer class="footer footer-center block mb-5 pt-10">
+<footer class="footer footer-center block mb-5 pt-10 border-t border-base-300">
   <div class="pb-2">
-    &copy; {today.getFullYear()}  Jonathan Diaz
+    &copy; {today.getFullYear()} Jonathan Diaz
   </div>
-  <div class="inline opacity-75">
-    Built with <a href="https://astro.build" target="_blank" class="font-bold">Astro</a>
+  <div class="flex gap-4 justify-center opacity-75 text-sm">
+    <a href="https://github.com/jd627804" target="_blank" rel="noopener noreferrer" class="link link-hover">GitHub</a>
+    <a href="https://www.linkedin.com/in/jonathan-diaz" target="_blank" rel="noopener noreferrer" class="link link-hover">LinkedIn</a>
+    <a href="mailto:jd627804@gmail.com" class="link link-hover">Email</a>
+  </div>
+  <div class="text-xs opacity-60 mt-1">
+    Built with <a href="https://astro.build" target="_blank" class="link">Astro</a>
   </div>
 </footer>
-<style></style>

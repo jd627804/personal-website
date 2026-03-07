@@ -1,33 +1,62 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { Cpu, MapPin, UtensilsCrossed } from "@lucide/astro";
 ---
 
 <BaseLayout title="About | Jonathan Diaz" sideBarActiveItemID="about">
-  <div class="mb-6">
+  <div class="mb-10">
     <h1 class="text-4xl font-bold mb-2">About Me</h1>
+    <p class="text-lg text-base-content/80">
+      Engineer, builder, and curiosity-driven problem solver.
+    </p>
   </div>
 
-  <div class="space-y-6 max-w-2xl">
-    <p class="text-lg">
-      When I'm not working on image processing and tracking systems, I love getting out and exploring.
-    </p>
-
-    <div>
-      <h2 class="text-2xl font-bold mb-3">Florida Springs</h2>
+  <div class="prose prose-lg max-w-none space-y-8">
+    <section>
+      <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+        <Cpu class="w-6 h-6 text-primary" />
+        Engineering
+      </h2>
       <p class="text-base-content/90">
-        I'm a big fan of traveling and exploring Florida's natural springs. We've been to
-        Wekiva, Silver, Blue, De Leon, and several others around central Florida. There's
-        something special about swimming in crystal-clear water and seeing the underwater
-        world—it never gets old.
+        I enjoy building technical systems that combine math, software, and real-world sensing. 
+        I'm drawn to problems where estimation, filtering, and computer vision meet practical deployment—tracking systems, 
+        sensor fusion pipelines, and AI-assisted tools that work in real conditions.
       </p>
-    </div>
+      <p class="text-base-content/90 mt-4">
+        I like turning theory into working systems: Kalman filters that run on embedded hardware, 
+        vision pipelines that handle messy real-world data, and algorithms that bridge research and production.
+      </p>
+    </section>
 
-    <div>
-      <h2 class="text-2xl font-bold mb-3">Food</h2>
+    <section>
+      <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+        <MapPin class="w-6 h-6 text-primary" />
+        Florida Springs
+      </h2>
       <p class="text-base-content/90">
-        I enjoy eating all kinds of foods, from KBBQ to seafood boils and everything in
-        between. Always down to try something new.
+        Outside of engineering, I love exploring Florida's natural springs. We've been to Wekiva, Silver, Blue, De Leon, 
+        and several others around central Florida. There's something special about swimming in crystal-clear water 
+        and seeing the underwater world—it never gets old.
       </p>
-    </div>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+        <UtensilsCrossed class="w-6 h-6 text-primary" />
+        Food
+      </h2>
+      <p class="text-base-content/90">
+        I enjoy eating all kinds of foods, from KBBQ to seafood boils and everything in between. 
+        Always down to try something new.
+      </p>
+    </section>
+
+    <section class="p-6 rounded-xl bg-base-200 border border-base-300">
+      <p class="text-base-content/90 italic">
+        "I enjoy building technical systems that combine math, software, and real-world sensing. 
+        Outside of engineering I enjoy exploring Florida's springs, experimenting with new projects, 
+        and continuously learning."
+      </p>
+    </section>
   </div>
 </BaseLayout>

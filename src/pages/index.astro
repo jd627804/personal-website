@@ -1,50 +1,120 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectPreview from "../components/ProjectPreview.astro";
+import { Briefcase, Sparkles, Target } from "@lucide/astro";
 ---
 
 <BaseLayout title="Jonathan Diaz" sideBarActiveItemID="home">
-<h1 class="text-5xl font-bold">
-Jonathan Diaz
-</h1>
+  <!-- Hero -->
+  <section class="mb-16">
+    <h1 class="text-4xl md:text-5xl font-bold tracking-tight">
+      Engineer building <span class="text-primary">vision, tracking, and AI systems</span>
+    </h1>
+    <p class="text-xl text-base-content/80 mt-4 max-w-2xl">
+      I turn math and algorithms into real-world systems. Focused on image processing, estimation, sensor fusion, and applied AI.
+    </p>
 
-<p class="text-xl mt-4">
-Engineer specializing in image processing, tracking systems, and applied artificial intelligence.
-</p>
+    <!-- Credibility bullets -->
+    <ul class="mt-6 space-y-2 text-base-content/80">
+      <li class="flex items-center gap-2">
+        <Briefcase class="w-4 h-4 text-primary shrink-0" />
+        Engineer II at Lockheed Martin
+      </li>
+      <li class="flex items-center gap-2">
+        <Target class="w-4 h-4 text-primary shrink-0" />
+        Experience in tracking, image processing, and AI systems
+      </li>
+      <li class="flex items-center gap-2">
+        <Sparkles class="w-4 h-4 text-primary shrink-0" />
+        Background in Kalman filtering, sensor fusion, and computer vision
+      </li>
+    </ul>
 
-<p class="mt-6 max-w-2xl">
-I build systems that combine computer vision, estimation algorithms, and software engineering
-to solve real-world problems. My work focuses on tracking, sensor fusion, and intelligent
-analysis systems, with experience developing image processing pipelines, Kalman filter-based
-tracking solutions, and AI-driven tools for complex environments.
-</p>
+    <!-- CTAs -->
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a
+        href="/resume"
+        class="btn btn-primary px-6"
+      >
+        View Resume
+      </a>
+      <a
+        href="/projects"
+        class="btn btn-outline px-6"
+      >
+        Explore Projects
+      </a>
+      <a
+        href="https://www.linkedin.com/in/jonathan-diaz"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-ghost px-6"
+      >
+        Connect on LinkedIn
+      </a>
+    </div>
+  </section>
 
-<p class="mt-4 max-w-2xl">
-Currently an Engineer II at Lockheed Martin working on image processing,
-tracking algorithms, and AI applications. I enjoy building practical systems
-that bridge research and real-world deployment.
-</p>
+  <!-- Featured Skills -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold mb-4">Technical Focus</h2>
+    <div class="flex flex-wrap gap-2">
+      <span class="badge badge-lg">Image Processing</span>
+      <span class="badge badge-lg">Computer Vision</span>
+      <span class="badge badge-lg">Tracking & Estimation</span>
+      <span class="badge badge-lg">Kalman Filters</span>
+      <span class="badge badge-lg">Sensor Fusion</span>
+      <span class="badge badge-lg">Artificial Intelligence</span>
+      <span class="badge badge-lg">MATLAB</span>
+      <span class="badge badge-lg">Python</span>
+      <span class="badge badge-lg">C++</span>
+      <span class="badge badge-lg">Systems Engineering</span>
+    </div>
+  </section>
 
-<div class="mt-8 flex gap-4 flex-wrap">
-  <a
-    href="/cv"
-    class="bg-blue-600 text-white px-5 py-3 rounded hover:bg-blue-700 transition"
-  >
-    View Resume
-  </a>
+  <!-- Featured Projects -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold mb-4">Featured Projects</h2>
+    <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <ProjectPreview
+        title="IMU Orientation Tracking on Raspberry Pi"
+        summary="Beginner sensor fusion pipeline for orientation tracking using IMU data and filtering methods."
+        stack={["Python", "Raspberry Pi", "IMU", "Kalman Filter"]}
+        url="/projects#imu-orientation"
+      />
+      <ProjectPreview
+        title="Golf Ball Tracking and Launch Estimation"
+        summary="Video-based ball detection and trajectory estimation using computer vision and nonlinear filtering."
+        stack={["Computer Vision", "UKF/EKF", "Python"]}
+        url="/projects#golf-tracking"
+      />
+      <ProjectPreview
+        title="HORIZON Vehicular AI HUD"
+        summary="Modular Raspberry Pi-based vehicular HUD with driving analytics, sensors, and visualization."
+        stack={["Raspberry Pi", "Python", "Sensor Fusion"]}
+        url="/projects#horizon-hud"
+      />
+    </div>
+    <div class="mt-4">
+      <a href="/projects" class="link link-primary font-medium">View all projects →</a>
+    </div>
+  </section>
 
-  <a
-    href="/about"
-    class="border border-gray-400 px-5 py-3 rounded hover:bg-gray-100 transition"
-  >
-    About Me
-  </a>
+  <!-- Current Focus -->
+  <section class="mb-16 p-6 rounded-2xl bg-base-200 border border-base-300">
+    <h2 class="text-2xl font-bold mb-4">Current Focus</h2>
+    <ul class="space-y-2 text-base-content/90">
+      <li>• Exploring sensor fusion and tracking algorithms using Raspberry Pi IMU data</li>
+      <li>• Building motion estimation and AI-assisted sensing systems</li>
+      <li>• Experimenting with computer vision pipelines and estimation techniques</li>
+    </ul>
+  </section>
 
-  <a
-    href="https://github.com/jd627804"
-    target="_blank"
-    class="border border-gray-400 px-5 py-3 rounded hover:bg-gray-100 transition"
-  >
-    GitHub
-  </a>
-</div>
+  <!-- Contact CTA -->
+  <section class="text-center py-8 border-t border-base-300">
+    <p class="text-base-content/80 mb-4">Interested in working together?</p>
+    <a href="mailto:jd627804@gmail.com" class="btn btn-primary">
+      Get in Touch
+    </a>
+  </section>
 </BaseLayout>

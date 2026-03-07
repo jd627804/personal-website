@@ -1,9 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import TimeLineElement from "../components/cv/TimeLine.astro";
+import TimeLineElement from "../components/resume/TimeLine.astro";
 ---
 
-<BaseLayout title="Jonathan Diaz | Resume" sideBarActiveItemID="cv">
+<BaseLayout title="Jonathan Diaz | Resume" sideBarActiveItemID="resume">
   <div class="mb-6">
     <h1 class="text-4xl font-bold">Jonathan Diaz</h1>
     <p class="text-lg mt-2 text-gray-600">
@@ -11,26 +11,13 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     </p>
 
     <div class="flex flex-wrap gap-4 mt-6">
-      <a
-        href="/resume.pdf"
-        download
-        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
-      >
+      <a href="/resume.pdf" download class="btn btn-primary">
         Download Resume
       </a>
-
-      <a
-        href="https://github.com/jd627804"
-        target="_blank"
-        class="border border-gray-400 px-4 py-2 rounded hover:bg-gray-100 transition"
-      >
+      <a href="https://github.com/jd627804" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
         GitHub
       </a>
-
-      <a
-        href="/"
-        class="border border-gray-400 px-4 py-2 rounded hover:bg-gray-100 transition"
-      >
+      <a href="/" class="btn btn-ghost">
         Back to Home
       </a>
     </div>
