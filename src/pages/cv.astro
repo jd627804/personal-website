@@ -3,28 +3,131 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
-<BaseLayout title="Resume" sideBarActiveItemID="cv">
-  <div class="mb-5 flex items-center justify-between">
-    <div class="text-3xl w-full font-bold">Profile</div>
+<BaseLayout title="Jonathan Diaz | Resume" sideBarActiveItemID="cv">
+  <div class="mb-6">
+    <h1 class="text-4xl font-bold">Jonathan Diaz</h1>
+    <p class="text-lg mt-2 text-gray-600">
+      Engineer specializing in image processing, tracking systems, and applied artificial intelligence.
+    </p>
 
-    <a
-      href="/resume.pdf"
-      download
-      class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
-    >
-      Download Resume
-    </a>
+    <div class="flex flex-wrap gap-4 mt-6">
+      <a
+        href="/resume.pdf"
+        download
+        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+      >
+        Download Resume
+      </a>
+
+      <a
+        href="https://github.com/jd627804"
+        target="_blank"
+        class="border border-gray-400 px-4 py-2 rounded hover:bg-gray-100 transition"
+      >
+        GitHub
+      </a>
+
+      <a
+        href="/"
+        class="border border-gray-400 px-4 py-2 rounded hover:bg-gray-100 transition"
+      >
+        Back to Home
+      </a>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
   </div>
 
   <div class="mb-10 text-justify">
-    Software engineer specializing in image processing, tracking systems,
-    and applied artificial intelligence. Experienced building real-world
-    systems combining computer vision, estimation algorithms, and
-    software engineering.
-
-    Currently working as an engineer at Lockheed Martin focusing on
-    image processing, tracking, and AI applications.
+    Engineer with experience in image processing, tracking algorithms, estimation, and applied AI.
+    My work focuses on building practical systems that combine computer vision, filtering and estimation,
+    and software engineering to solve real-world problems. I enjoy developing intelligent systems that
+    bridge theory and deployment, including sensor-based platforms, tracking pipelines, and AI-enabled tools.
   </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10 grid gap-4">
+    <TimeLineElement
+      title="Engineer II"
+      subtitle="Lockheed Martin — Orlando, FL"
+    >
+      Working on image processing, tracking, and artificial intelligence applications. Experience includes
+      developing and analyzing algorithms for estimation, detection, and real-world system performance.
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Scrum Master"
+      subtitle="Lockheed Martin"
+    >
+      Supporting team execution, coordination, and delivery while contributing technical engineering work.
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Projects & Technical Work</div>
+  </div>
+
+  <div class="time-line-container mb-10 grid gap-4">
+    <TimeLineElement
+      title="HORIZON Vehicular AI HUD Platform"
+      subtitle="Personal Project"
+    >
+      Developing a modular Raspberry Pi-based vehicular HUD platform combining driving analytics,
+      sensor inputs, environmental monitoring, and visualization.
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Raspberry Pi Orientation and Tracking Development"
+      subtitle="Personal Project"
+    >
+      Building beginner-to-intermediate tracking and sensor fusion workflows using a Raspberry Pi 5 and IMU,
+      beginning with orientation tracking and expanding toward Kalman filter-based fusion.
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Golf Ball Tracking and Launch Metrics System"
+      subtitle="Personal Project"
+    >
+      Exploring a computer vision and physics-based pipeline for golf ball detection, tracking,
+      and launch metric estimation from video.
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="NAS / Plex Server Build"
+      subtitle="Personal Project"
+    >
+      Building a home NAS and media server environment with a focus on practical infrastructure,
+      storage, and self-hosted services.
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Technical Skills</div>
+  </div>
+
+  <ul class="list-disc md:columns-3 columns-2 mx-6 mb-10 grid gap-2">
+    <li>Python</li>
+    <li>C++</li>
+    <li>MATLAB</li>
+    <li>Computer Vision</li>
+    <li>Image Processing</li>
+    <li>Object Tracking</li>
+    <li>Kalman Filters</li>
+    <li>Sensor Fusion</li>
+    <li>Machine Learning</li>
+    <li>AI Applications</li>
+    <li>Linux</li>
+    <li>Docker / Containers</li>
+    <li>Podman</li>
+    <li>Raspberry Pi</li>
+    <li>Signal Processing</li>
+    <li>Algorithm Development</li>
+  </ul>
 
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Education</div>
@@ -32,77 +135,8 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
-    <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
+      title="University of Central Florida"
+      subtitle="Add your degree, graduation year, and any honors here"
     />
   </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experience</div>
-  </div>
-
-  <div class="time-line-container mb-10">
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    > intelligence. Experienced building real-world
-    systems combining computer vision, estimation algorithms, and
-    software engineering.
-
-    Currently working as an engineer at Lockheed Martin focusing on
-    image processing, tracking, and AI applications.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-  </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certifications</div>
-  </div>
-
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-  </ul>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Skills</div>
-  </div>
-
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-  </ul>
 </BaseLayout>
